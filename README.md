@@ -18,17 +18,32 @@
 
 ```json
 {
-    "workbench.startupEditor": "newUntitledFile",
-    "window.zoomLevel": 2,
+    "workbench.startupEditor": "none",
+    "window.zoomLevel": 0.5,
     "workbench.colorTheme": "One Monokai",
+    "workbench.preferredLightColorTheme": "Atom One Light",
+    "workbench.preferredDarkColorTheme": "One Monokai",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontFamily": "Ubuntu Mono, monospace",
-    "editor.fontSize": 18,
+    "editor.fontSize": 20,
     "editor.fontWeight": "500",
     "terminal.integrated.fontFamily": "Ubuntu Mono, monospace",
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 18,
     "terminal.integrated.fontWeight": "500",
+    "editor.fontLigatures": false,
     "files.autoSave": "afterDelay",
-    "editor.fontLigatures": false
+    "launch": {
+        "configurations": [
+            {
+                "type": "pwa-node",
+                "name": "Launch Program",
+                "program": "${file}",
+                "request": "launch",
+                "skipFiles": [
+                    "<node_internals>/**"
+                ]
+            }
+        ]
+    }
 }
 ```

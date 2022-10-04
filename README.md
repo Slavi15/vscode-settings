@@ -41,7 +41,7 @@
                 "request": "launch",
                 "args": [
                     "-u",
-                    "tdd",
+                    "bdd",
                     "--timeout",
                     "999999",
                     "--colors",

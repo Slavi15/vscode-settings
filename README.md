@@ -35,7 +35,25 @@
     "launch": {
         "configurations": [
             {
-                "type": "pwa-node",
+                "type": "node",
+                "name": "Mocha Tests",
+                "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+                "request": "launch",
+                "args": [
+                    "-u",
+                    "tdd",
+                    "--timeout",
+                    "999999",
+                    "--colors",
+                    "${file}"
+                ],
+                "internalConsoleOptions": "openOnSessionStart",
+                "skipFiles": [
+                    "<node_internals>/**"
+                ]
+            },
+            {
+                "type": "node",
                 "name": "Launch Program",
                 "program": "${file}",
                 "request": "launch",
